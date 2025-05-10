@@ -2,14 +2,6 @@
 live_config_reload = true
 working_directory = "None"
 
-[bell]
-animation = "EaseOutCirc"
-color = "#a9b1d6"
-duration = 0
-
-[colors]
-draw_bold_text_with_bright_colors = false
-
 [window]
 opacity = 0.9
 dimensions = { columns = 80, lines = 30 }
@@ -25,26 +17,40 @@ title = "Alacritty"
 general = "Alacritty"
 instance = "Alacritty"
 
+[window.padding]
+x = 5
+y = 5
+
 [scrolling]
 history = 500
 multiplier = 1
-
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "Return"
-mods = "Control|Shift"
 
 [font]
 size = 12
 builtin_box_drawing = true
 
-# [font.normal]
-# family = "JetBrains Mono"
-# style = "Regular"
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
 
-[window.padding]
-x = 5
-y = 5
+[font.bold_italic]
+family = "JetBrains Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[colors]
+draw_bold_text_with_bright_colors = false
 
 [colors.bright]
 black = "#444b6a"
@@ -70,6 +76,11 @@ yellow = "#e0af68"
 background = "#1a1b26"
 foreground = "#a9b1d6"
 
+[bell]
+animation = "EaseOutCirc"
+color = "#a9b1d6"
+duration = 0
+
 [cursor]
 blink_interval = 500
 thickness = 0.15
@@ -78,26 +89,6 @@ unfocused_hollow = true
 [cursor.style]
 blinking = "On"
 shape = "Block"
-
-[font.bold]
-family = "JetBrains Mono"
-style = "Bold"
-
-[font.bold_italic]
-family = "JetBrains Mono"
-style = "Bold Italic"
-
-[font.italic]
-family = "JetBrains Mono"
-style = "Italic"
-
-[font.normal]
-family = "JetBrains Mono"
-style = "Regular"
-
-[font.offset]
-x = 0
-y = 0
 
 [mouse]
 hide_when_typing = false
@@ -109,4 +100,10 @@ mouse = "Middle"
 [[mouse.bindings]]
 action = "Copy"
 mouse = "Right"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
 
